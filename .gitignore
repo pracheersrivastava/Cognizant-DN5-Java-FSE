@@ -1,0 +1,14 @@
+target/
+out/
+node_modules/
+build/
+dist/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.DS_Store
+reference-repo/
+Java FSE/
+*.log
