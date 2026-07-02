@@ -11,4 +11,5 @@ dist/
 .DS_Store
 reference-repo/
 Java FSE/
+react-hols.txt
 *.log
