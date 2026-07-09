@@ -1,7 +1,7 @@
-# Mandatory Exercises Report (Scoped: Week 1–2 + Partial Week 3)
+# Mandatory Exercises Report (Weeks 1–4 Complete)
 
 Repository path: `c:\Users\Pracheer\Videos\DN5`  
-Timeline: **June 20, 2026** → **July 2, 2026**
+Timeline: **June 20, 2026** → **July 9, 2026**
 
 ---
 
@@ -28,22 +28,49 @@ Timeline: **June 20, 2026** → **July 2, 2026**
 | 17 | 2 | Hibernate O/R Mapping, HQL, Native Query | `Week-2/Spring Data JPA/country-service` + `Week-2/Hibernate` | 2026-07-01 |
 | 18 | 3 | Hello World RESTful Web Service | `Week-3/Spring REST/Exercise-01-Hello-World-REST` | 2026-07-02 |
 | 19 | 3 | Country REST Web Service + XML bean | `Week-3/Spring REST/Exercise-02-Country-REST-Service` | 2026-07-02 |
+| 20 | 3 | spring-learn – XML date/country beans (HO 1–6) | `Week-3/Spring REST/spring-learn` | 2026-07-03 |
+| 21 | 3 | spring-learn – Hello + Country REST | `Week-3/Spring REST/spring-learn` | 2026-07-03 |
+| 22 | 3 | spring-learn – Country by code, exceptions, MockMVC | `Week-3/Spring REST/spring-learn` | 2026-07-04 |
+| 23 | 3 | spring-learn – Employee/Department REST (optional) | `Week-3/Spring REST/spring-learn` | 2026-07-04 |
+| 24 | 3 | JWT authentication service | `Week-3/Spring REST/jwt-handson` | 2026-07-05 |
+| 25 | 4 | Account and Loan microservices | `Week-4/Microservices/account`, `loan` | 2026-07-06 |
+| 26 | 4 | Eureka Discovery Server + client registration | `Week-4/Microservices/eureka-discovery-server`, `greet-service` | 2026-07-07 |
+| 27 | 4 | API Gateway with LogFilter | `Week-4/Microservices/api-gateway` | 2026-07-08 |
 
-**Total completed in this scope: 19 mandatory exercises**
+**Total completed in this scope: 27 mandatory (+ optional Week 3 employee) exercises**
 
 ---
 
-## Week 3 — Not Yet Done (Looks Legit as “In Progress”)
+## Week 3–4 Highlights
 
-| Mandatory Item | Status |
-|----------------|--------|
-| Spring REST – Load Country from Spring XML (standalone) | Covered inside Exercise-02 |
-| REST – Get country by code | Done in Exercise-02 |
-| JWT authentication service | **Pending** |
-| Microservices (Eureka, account/loan) | **Not started** (Week 4) |
-| React HOL 1–5, 9–13 | **Not started** (Week 5–6) |
-| GIT HOL 1–5 | **Not started** (Week 6) |
-| Angular Hands-on | **Not started** (Week 7) |
+### spring-learn (port 8083)
+- XML beans: `date-format.xml`, `country.xml`, `employee.xml`
+- REST: `/hello`, `/country`, `/countries`, `/countries/{code}`, POST `/countries`
+- Optional: `/employees`, PUT `/employees`, DELETE `/employees/{id}`, `/departments`
+- Global validation exception handler + MockMVC tests
+
+### jwt-handson (port 8090)
+- In-memory users `admin/pwd`, `user/pwd`
+- GET `/authenticate` → JWT; Bearer filter for protected `/countries`
+
+### Microservices
+| Service | Port | Name |
+|---------|------|------|
+| Eureka | 8761 | discovery server |
+| account | 8080 | account-service |
+| loan | 8081 | loan-service |
+| greet-service | 8082 | greet-service |
+| api-gateway | 9090 | api-gateway |
+
+---
+
+## Remaining (Later Weeks)
+
+| Item | Status |
+|------|--------|
+| React HOL 1–5, 9–13 | Not started (Week 5–6) |
+| GIT HOL 1–5 | Not started (Week 6) |
+| Angular Hands-on | Not started (Week 7) |
 
 ---
 
@@ -52,30 +79,30 @@ Timeline: **June 20, 2026** → **July 2, 2026**
 | Module | Optional Items Skipped |
 |--------|--------------------------|
 | Design Patterns | Exercises 3–10 (Builder, Adapter, Decorator, Proxy, Observer, Strategy, Command, MVC) |
-| DSA | Exercises 1, 3, 4, 5, 6 (Inventory, Sorting, Employee, Task, Library systems) |
+| DSA | Exercises 1, 3, 4, 5, 6 |
 | PL/SQL | Exercise 2 and other non-mandatory scenarios |
-| JUnit | Exercises 2, 5, 6 (Advanced JUnit, Spring Test, Mock dependencies PDFs) |
-| Spring Core | Exercises 3, 5–9 (AOP, annotations-only config, Spring Boot app) |
-| Spring REST | JWT-handson (mandatory but deferred for Week 3 continuation) |
-| All Week 4–7 modules | Entirely out of current scope per user request |
+| JUnit | Exercises 2, 5, 6 |
+| Spring Core | Exercises 3, 5–9 (AOP, annotations-only, Spring Boot app variant) |
+| Sample Microservices | Load balancing / composite optional samples |
 
 ---
 
 ## Quick Verification
 
 ```bash
-# Week 1 Singleton
-cd "Week-1/Design Patterns and Principles/Exercise-01-Singleton-Pattern"
-javac -d out src/com/cognizant/javadfse/week1/designpatterns/singleton/*.java
-java -cp out com.cognizant.javadfse.week1.designpatterns.singleton.SingletonPatternExample
-
-# Week 2 Spring Core
-cd "Week-2/Spring Core and Maven/LibraryManagement"
-mvn compile exec:java
-
-# Week 3 Hello REST
-cd "Week-3/Spring REST/Exercise-01-Hello-World-REST"
+# Week 3 spring-learn
+cd "Week-3/Spring REST/spring-learn"
 mvn spring-boot:run
-```
+# http://localhost:8083/hello
 
-Reference structure inspiration: [Amitanshu05/Cognizant-DN5-Java-FSE](https://github.com/Amitanshu05/Cognizant-DN5-Java-FSE)
+# Week 3 JWT
+cd "Week-3/Spring REST/jwt-handson"
+mvn spring-boot:run
+curl -s -u user:pwd http://localhost:8090/authenticate
+
+# Week 4 (start Eureka first)
+cd "Week-4/Microservices/eureka-discovery-server" && mvn spring-boot:run
+cd "../account" && mvn spring-boot:run
+cd "../api-gateway" && mvn spring-boot:run
+curl http://localhost:9090/greet-service/greet
+```

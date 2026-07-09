@@ -1,6 +1,6 @@
 # Cognizant Digital Nurture 5.0 - Java FSE
 
-Mandatory hands-on exercises for Deep Skilling (Weeks 1-3 in progress).
+Mandatory hands-on exercises for Deep Skilling (Weeks 1–4 complete).
 
 ## Completed Scope
 
@@ -8,7 +8,8 @@ Mandatory hands-on exercises for Deep Skilling (Weeks 1-3 in progress).
 |------|--------|--------|
 | Week 1 | Design Patterns, DSA, PL/SQL, JUnit/Mockito/SLF4J | Complete |
 | Week 2 | Spring Core, Maven, Spring Data JPA, Hibernate | Complete |
-| Week 3 | Spring REST using Spring Boot 3 | In progress |
+| Week 3 | Spring REST using Spring Boot 3, JWT | Complete |
+| Week 4 | Microservices (Eureka, Account/Loan, API Gateway) | Complete |
 
 ## Structure
 
@@ -23,7 +24,18 @@ Week-2/
   Spring Data JPA/
   Hibernate/
 Week-3/
-  Spring REST/          (partial)
+  Spring REST/
+    Exercise-01-Hello-World-REST/
+    Exercise-02-Country-REST-Service/
+    spring-learn/          (full curriculum project)
+    jwt-handson/           (JWT authentication)
+Week-4/
+  Microservices/
+    eureka-discovery-server/
+    account/
+    loan/
+    greet-service/
+    api-gateway/
 ```
 
 ## Prerequisites
@@ -34,6 +46,7 @@ Week-3/
 
 ## Package Convention
 
-`com.cognizant.javadfse.week{N}.{topic}`
+- Weeks 1–2 / early Week 3 exercises: `com.cognizant.javadfse.week{N}.{topic}`
+- Curriculum-aligned Week 3–4 projects: `com.cognizant.springlearn` / `com.cognizant.*`
 
-See `MANDATORY_EXERCISES_REPORT.md` for commit timeline and skipped optional exercises.
+See `MANDATORY_EXERCISES_REPORT.md` for the full exercise timeline.
