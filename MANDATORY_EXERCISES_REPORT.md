@@ -1,7 +1,7 @@
-# Mandatory Exercises Report (Weeks 1–4 Complete)
+# Mandatory Exercises Report (Weeks 1–5 Complete)
 
 Repository path: `c:\Users\Pracheer\Videos\DN5`  
-Timeline: **June 20, 2026** → **July 9, 2026**
+Timeline: **June 20, 2026** → **July 16, 2026**
 
 ---
 
@@ -36,8 +36,18 @@ Timeline: **June 20, 2026** → **July 9, 2026**
 | 25 | 4 | Account and Loan microservices | `Week-4/Microservices/account`, `loan` | 2026-07-06 |
 | 26 | 4 | Eureka Discovery Server + client registration | `Week-4/Microservices/eureka-discovery-server`, `greet-service` | 2026-07-07 |
 | 27 | 4 | API Gateway with LogFilter | `Week-4/Microservices/api-gateway` | 2026-07-08 |
+| 28 | 5 | React HOL 1 – myfirstreact | `Week-5/React/myfirstreact` | 2026-07-10 |
+| 29 | 5 | React HOL 2 – StudentApp class components | `Week-5/React/StudentApp` | 2026-07-10 |
+| 30 | 5 | React HOL 3 – scorecalculatorapp | `Week-5/React/scorecalculatorapp` | 2026-07-11 |
+| 31 | 5 | React HOL 4 – blogapp lifecycle + fetch | `Week-5/React/blogapp` | 2026-07-11 |
+| 32 | 5 | React HOL 5 – cohortstracker CSS modules | `Week-5/React/cohortstracker` | 2026-07-12 |
+| 33 | 5 | React HOL 9 – cricketapp ES6 | `Week-5/React/cricketapp` | 2026-07-13 |
+| 34 | 5 | React HOL 10 – officespacerentalapp JSX | `Week-5/React/officespacerentalapp` | 2026-07-14 |
+| 35 | 5 | React HOL 11 – eventexamplesapp | `Week-5/React/eventexamplesapp` | 2026-07-14 |
+| 36 | 5 | React HOL 12 – ticketbookingapp | `Week-5/React/ticketbookingapp` | 2026-07-15 |
+| 37 | 5 | React HOL 13 – bloggerapp conditional rendering | `Week-5/React/bloggerapp` | 2026-07-15 |
 
-**Total completed in this scope: 27 mandatory (+ optional Week 3 employee) exercises**
+**Total completed in this scope: 37 mandatory (+ optional Week 3 employee) exercises**
 
 ---
 
@@ -64,13 +74,36 @@ Timeline: **June 20, 2026** → **July 9, 2026**
 
 ---
 
+## Week 5 React Highlights
+
+| App | HOL | Focus |
+|-----|-----|--------|
+| myfirstreact | 1 | CRA setup, first heading |
+| StudentApp | 2 | Class components (Home/About/Contact) |
+| scorecalculatorapp | 3 | Function component + CSS |
+| blogapp | 4 | `componentDidMount`, fetch, `componentDidCatch` |
+| cohortstracker | 5 | CSS Modules + inline status color |
+| cricketapp | 9 | map/filter, destructuring, spread |
+| officespacerentalapp | 10 | JSX + conditional rent color |
+| eventexamplesapp | 11 | Events, synthetic event, currency convertor |
+| ticketbookingapp | 12 | Conditional rendering (guest/user) |
+| bloggerapp | 13 | Multiple conditional render patterns + keys |
+
+```bash
+cd Week-5/React/myfirstreact
+npm install
+npm start
+```
+
+---
+
 ## Remaining (Later Weeks)
 
 | Item | Status |
 |------|--------|
-| React HOL 1–5, 9–13 | Not started (Week 5–6) |
 | GIT HOL 1–5 | Not started (Week 6) |
 | Angular Hands-on | Not started (Week 7) |
+| React HOL 6–8, 14–19 (additional) | Skipped optional |
 
 ---
 
@@ -84,6 +117,7 @@ Timeline: **June 20, 2026** → **July 9, 2026**
 | JUnit | Exercises 2, 5, 6 |
 | Spring Core | Exercises 3, 5–9 (AOP, annotations-only, Spring Boot app variant) |
 | Sample Microservices | Load balancing / composite optional samples |
+| React | HOL 6–8, 14–19 (additional important hands-on) |
 
 ---
 
@@ -105,4 +139,7 @@ cd "Week-4/Microservices/eureka-discovery-server" && mvn spring-boot:run
 cd "../account" && mvn spring-boot:run
 cd "../api-gateway" && mvn spring-boot:run
 curl http://localhost:9090/greet-service/greet
+
+# Week 5 React
+cd "Week-5/React/cricketapp" && npm install && npm start
 ```
